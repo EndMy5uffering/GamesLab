@@ -1,0 +1,74 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "RTSCamControlls",
+            "id": "95ad80cf-a061-44b3-8aba-be7b85edd5ea",
+            "actions": [
+                {
+                    "name": "ZoomInOutAction",
+                    "type": "Value",
+                    "id": "800ee645-5554-4e71-9e7e-659dd3bf367c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CamPanControlls",
+                    "type": "Button",
+                    "id": "578a6133-86bf-4fde-885b-ae9ce99d9e17",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PointerDirections",
+                    "type": "Value",
+                    "id": "ffa661f0-a793-4d70-a196-9983099ee75c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fe95efee-8b03-4614-a3e9-00cbcc47bd6a",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "Clamp(min=-1,max=1)",
+                    "groups": "",
+                    "action": "ZoomInOutAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3875fd42-8ba3-4a6f-8530-a22e388eec92",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CamPanControlls",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3582564-025d-4143-a43f-c48f550bcbec",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.1,y=-0.1)",
+                    "groups": "",
+                    "action": "PointerDirections",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
